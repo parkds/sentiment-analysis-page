@@ -35,16 +35,15 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
-/*
-// designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
-})
-*/
-
 //listen to the env port - for heroku deployment
 app.listen(process.env.PORT,listening);
 
+if (process.env.PORT == undefined) {
+    console.log("Port number undefined, running on 8081")
+    app.listen(8081, function () {
+        console.log('Example app listening on port 8081!')
+    })
+}
 function listening(){
     console.log("Server running on ",process.env.PORT);
 }
