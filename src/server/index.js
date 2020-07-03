@@ -43,7 +43,12 @@ app.listen(8081, function () {
 */
 
 //listen to the env port - for heroku deployment
-app.listen(process.env.PORT, listening);
+app.listen(process.env.PORT,listening);
+
+function listening(){
+    console.log("Server running on ",process.env.PORT);
+}
+
 
 app.post('/analyze', function (req, res) {
     console.log("Got the post request")
