@@ -8,7 +8,7 @@ function handleSubmit(event) {
     console.log("::: Input: ", formText, "validity check", validInput," :::")
     if (validInput==true) {
         console.log("::: Form Submitted :::")
-        fetch('/analyze',{
+        fetch(__APIHOST__+'analyze',{
             method: 'POST',
             credentials: 'same-origin',
             headers: {
