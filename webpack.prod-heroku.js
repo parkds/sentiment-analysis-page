@@ -48,7 +48,7 @@ module.exports = {
             protectWebpackAssets: false
         }),
         new webpack.DefinePlugin({
-            __APIHOST__: "'http://localhost:8081/'"
+            __APIHOST__: "'/'"
         })
 
     ]

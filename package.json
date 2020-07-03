@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "start": "node src/server/index.js",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod-heroku.js",
+    "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server --port 8080 --config webpack.dev.js --open"
   },
   "keywords": [],

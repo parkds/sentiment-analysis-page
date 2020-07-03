@@ -18,8 +18,14 @@ Jest testing framework is used to test all javascript functionality.
 First clone the project, obtain an API key from Aylien and create a .env file in the root directory with the Aylien API id and key.
 
 - npm install
-- npm run build
+- npm run build-prod
 - npm run start
 - visit localhost:8081
 
 One the webpage launches, enter any short statements to see the sentiment and objectivity analysis of the statement.
+
+### Builds
+
+-npm run build: For automatic build during node js app deployment on heroku.
+-npm run build-prod: For production build.
+-npm run build-dev: To build and start the webpack dev server on 8080.

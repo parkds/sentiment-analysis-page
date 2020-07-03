@@ -31,8 +31,8 @@ var textapi = new aylien({
   });
 
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile('dist/index.html')
+    //res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
 //listen to the env port - for heroku deployment
