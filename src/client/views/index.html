@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <link rel="stylesheet" href="/styles/resets.css">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/form.css">
+        <link rel="stylesheet" href="/styles/footer.css">
+        <link rel="stylesheet" href="/styles/results.css">
+        <link rel="stylesheet" href="/styles/instructions.css">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Text Sentiment and Objectivity Analyzer
+            </div>
+            <div class="">
+                Powered by Aylien
+            </div>
+        </header>
+
+        <main>
+            <section id = "form-and-results">
+                <div id = "form-instructions">Enter a short statement below to analyze its sentiment and subjectivity</div>
+                <div class = "instructions"> 
+                    This tool utilizes Aylien NLP api to determine whether your statement below is positive, neutral negative. It also tells whether your statement is obejctive or subjective.
+                    The score corresponds to the magnitude of how positive or negative the statement is, and how objective or subjective the statement is.
+                </div>
+                <div class = "instructions" id="example-instruction"> 
+                    Some example statements you can try is:
+                </div>
+                <div class = "instructions"> 
+                    "Pikachu is a wonderful pokemon, they are loyal, faithful, and their lightning bolt is a no match for any water type pokemon."
+                </div>
+                <div class = "instructions"> 
+                    "League of legends have been around for 10 years and has stayed popular especially among teens and young adults."
+                </div>
+                <div class = "instructions"> 
+                    "I hate onions, onions are awful and the only other thing that is as horrible as onions are peppers."
+                </div>
+                
+                
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="Type in a statement" required>
+                    <input type="submit" name="" value="Analyze" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+            <section id = "results-section">
+                <div id = "results-title">Sentiment and Subjectivity Analysis Results</div>
+                
+                <div id=results-holder>
+                    <div class = "results-text-holder" id="sentimentDisplay">Sentiment: </div>
+
+                    <div class = "results-text-holder" id="sentimentScoreDisplay">Sentiment Score: </div>
+
+                    <div class = "results-text-holder" id="subjectivityDisplay">Subjectivity: </div>
+
+                    <div class = "results-text-holder" id="subjectivityScoreDisplay">Subjectivity Score: </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Created by David Park</p>
+        </footer>
+        <script>
+            
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+            
+        </script>
+    </body>
+</html>
