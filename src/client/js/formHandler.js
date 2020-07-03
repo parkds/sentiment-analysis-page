@@ -8,7 +8,7 @@ function handleSubmit(event) {
     console.log("::: Input: ", formText, "validity check", validInput," :::")
     if (validInput==true) {
         console.log("::: Form Submitted :::")
-        fetch('http://localhost:8081/analyze',{
+        fetch('/analyze',{
             method: 'POST',
             credentials: 'same-origin',
             headers: {
