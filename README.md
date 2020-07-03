@@ -18,7 +18,7 @@ Jest testing framework is used to test all javascript functionality.
 First clone the project, obtain an API key from Aylien and create a .env file in the root directory with the Aylien API id and key.
 
 - npm install
-- npm run build-prod
+- npm run build
 - npm run start
 - visit localhost:8081
 

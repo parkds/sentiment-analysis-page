@@ -6,7 +6,7 @@
     "test": "jest",
     "start": "node src/server/index.js",
     "build": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server --port 8081 --config webpack.dev.js --open"
+    "build-dev": "webpack-dev-server --port 8080 --config webpack.dev.js --open"
   },
   "keywords": [],
   "author": "",
